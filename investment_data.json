@@ -1,0 +1,96 @@
+{
+  "lion": {
+    "username": "lion",
+    "destiny_company": {
+      "name": "뷰웍스",
+      "current_price": 23000,
+      "target_buy": 20000,
+      "target_sell": 31000,
+      "description": "뷰웍스는\n1️⃣ 국내 1위·글로벌 상위권 디지털 X-ray 디텍터 전문 기업으로, 의료·산업 영상 솔루션을 자체 브랜드로 공급함.\n\n2️⃣ AI 기반 영상 분석·차세대 디텍터 개발로 북미·유럽 시장 확대 및 산업용 영역(반도체·비파괴검사) 진출 중.\n\n3️⃣ 2025년 예상 순이익 221억 원, 목표가 34,000원으로 현재가 대비 약 59% 상승 여력과 2.8% 배당수익률 보유."
+    },
+    "interesting_companies": [
+      {
+        "name": "삼성전자",
+        "current_price": 71500,
+        "target_buy": 60000,
+        "target_sell": 85000,
+        "description": "머스크 이익으로 반등"
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      }
+    ]
+  },
+  "nara": {
+    "username": "nara",
+    "destiny_company": {
+      "name": "다우기술 (023590)",
+      "current_price": 33450,
+      "target_buy": 33500,
+      "target_sell": 48000,
+      "description": "다우기술은 IT 솔루션과 플랫폼을 제공하는 기업으로, 최대주주 다우데이타를 통해 키움증권을 지배하는 지주사 성격을 지님.\nPER이 업종 대비 낮아 저평가 매력이 있고, 배당수익률도 4%대라 안정적인 현금흐름을 제공한다. \n다만 복합 지배구조와 내부거래, 상법 개정에 따른 지배구조 변화 리스크를 함께 주시할 필요가 있다. "
+    },
+    "interesting_companies": [
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      }
+    ]
+  }
+}
