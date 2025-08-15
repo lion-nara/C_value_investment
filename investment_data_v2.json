@@ -1,88 +1,27 @@
 {
-  "tiger": {
-    "username": "tiger",
-    "destiny_company": {
-      "name": "다우기술",
-      "stock_code": "023590",
-      "current_price": 33350,
-      "target_buy": 30000,
-      "target_sell": 40000,
-      "description": "키움과 지주사 오너리스크만 해결되면 탄탄하지",
-      "last_updated": "2025-08-14 14:12:49",
-      "change": -250,
-      "change_rate": 0.0
-    },
-    "interesting_companies": [
-      {
-        "name": "SK하이닉스",
-        "stock_code": "00069",
-        "current_price": 117000,
-        "target_buy": 110000,
-        "target_sell": 130000,
-        "description": "반도체잖아. 흐름만 볼 줄 알면 조금 빨리 들어가면 되지 않을까?",
-        "last_updated": ""
-      },
-      {
-        "name": "",
-        "stock_code": "",
-        "current_price": 0,
-        "target_buy": 0,
-        "target_sell": 0,
-        "description": "",
-        "last_updated": ""
-      },
-      {
-        "name": "",
-        "stock_code": "",
-        "current_price": 0,
-        "target_buy": 0,
-        "target_sell": 0,
-        "description": "",
-        "last_updated": ""
-      },
-      {
-        "name": "",
-        "stock_code": "",
-        "current_price": 0,
-        "target_buy": 0,
-        "target_sell": 0,
-        "description": "",
-        "last_updated": ""
-      },
-      {
-        "name": "",
-        "stock_code": "",
-        "current_price": 0,
-        "target_buy": 0,
-        "target_sell": 0,
-        "description": "",
-        "last_updated": ""
-      }
-    ]
-  },
   "nara": {
     "username": "nara",
     "destiny_company": {
       "name": "다우기술",
       "stock_code": "023590",
-      "current_price": 33350,
+      "current_price": 33400,
       "target_buy": 33500,
       "target_sell": 48000,
       "description": "다우기술은  IT 솔루션과 플랫폼을 제공하는 기업으로, 최대주주 다우데이타를 통해 키움증권을 지배하는 지주사 성격을 지니고 있다. PER이 업종 대비 낮아 저평가 매력이 있고, 배당수익률도 4%대라 안정적인 현금흐름을 제공한다. 다만 복합 지배구조와 내부거래, 상법 개정에 따른 지배구조 변화 리스크를 함께 주시할 필요가 있다. ",
-      "last_updated": "2025-08-14 14:12:49",
-      "change": -250,
+      "last_updated": "2025-08-14 20:31:51",
+      "change": -200,
       "change_rate": 0.0
     },
     "interesting_companies": [
       {
         "name": "삼성전",
         "stock_code": "005930",
-        "current_price": 71700,
+        "current_price": 71600,
         "target_buy": 62300,
         "target_sell": 79200,
         "description": "",
-        "last_updated": "2025-08-14 14:12:49",
-        "change": -200,
+        "last_updated": "2025-08-14 20:31:51",
+        "change": -300,
         "change_rate": 0.0
       },
       {

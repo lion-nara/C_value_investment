@@ -57,6 +57,53 @@
     },
     "interesting_companies": [
       {
+        "name": "삼성전자",
+        "current_price": 75000,
+        "target_buy": 70000,
+        "target_sell": 90000,
+        "description": "머스크 영향은 긍정적인 것인가?"
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      },
+      {
+        "name": "",
+        "current_price": 0,
+        "target_buy": 0,
+        "target_sell": 0,
+        "description": ""
+      }
+    ]
+  },
+  "tiger": {
+    "username": "tiger",
+    "destiny_company": {
+      "name": "",
+      "current_price": 0,
+      "target_buy": 0,
+      "target_sell": 0,
+      "description": ""
+    },
+    "interesting_companies": [
+      {
         "name": "",
         "current_price": 0,
         "target_buy": 0,
