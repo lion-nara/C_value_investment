@@ -26,5 +26,16 @@
     "likes": 1,
     "retweets": 1,
     "comments": []
+  },
+  {
+    "id": 2,
+    "company": "삼성전",
+    "content": "기업 분석\n[2025.08.15]  ",
+    "author": "nara",
+    "timestamp": "2025-08-15 23:11:33",
+    "is_public": true,
+    "likes": 0,
+    "retweets": 0,
+    "comments": []
   }
 ]
