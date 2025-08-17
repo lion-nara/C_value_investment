@@ -39,7 +39,7 @@ https://cvalueinvestment-j67mjhzqlkoapmgbxghncy.streamlit.app/
   main2.py에 반영된 내용은 후에 추가 하여 배포준비 하였습니다.
 
 ## 5) 설치 & 실행 (로컬)
-```bash
+
 git clone <https://github.com/lion-nara/C_value_investment.git>
 cd <C_value_investment>
 pip install -r requirements.txt   # streamlit, requests, beautifulsoup4, lxml, pandas
@@ -74,3 +74,4 @@ streamlit run main2.py
 - 가치주 v2 bs4 보완 
     : 최종 클라우드를 위해 requirements2가 아닌 requirement.txt에 누락 패키지(beautifulsoup4) 추가
 - README.md 정보수정 : 업데이트 및 배포 링크
+
