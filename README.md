@@ -1,18 +1,18 @@
 **주소** 
 https://cvalueinvestment-j67mjhzqlkoapmgbxghncy.streamlit.app/
 
+
 # C_value_investment 
- - Claude와 함께 만드는 가치주 일지
+ - Claude와 함께 만드는 가치투자를 위한 기업 일지 커뮤니티
+
 
 ## 1) 프로젝트 개요
 
-관심 기업의 "현재가"와 등락을 확인하고, 
-나만의 "리서치 글"을 작성하고 공유하는 주식일지 커뮤니티 앱입니다. 
-네이버 증권에서 **현재가·등락률**을 가져오고, 
-글/댓글/리액션(좋아요·리트윗 카운트)을 **로컬 JSON 파일**로 영구 저장합니다.
-
-“작동하는 최소 기능(MVP)”에 집중했습니다.  
-버튼 한 번으로 데이터 갱신, 글쓰기·피드 통합, 간단한 반응(좋아요/리트윗)하도록 했습니다. 
+- 관심 기업의 "현재가"와 등락을 확인하고, 나만의 "리서치 글"을 작성하고 공유하는 주식일지 커뮤니티 앱입니다. 
+- 네이버 증권에서 **현재가·등락률**을 가져와서 매도, 매수 현황을 알려줍니다.
+- 글/댓글/리액션(좋아요·리트윗 카운트)을 **로컬 JSON 파일**로 영구 저장합니다.
+- 버튼 한 번으로 일지작성 날짜와 리서치 분야를 선택하는 최소 기능에 집중했습니다.  
+- 데이터 갱신, 글쓰기·피드 통합, 간단한 반응(좋아요/리트윗)하도록 했습니다. 
 
 ## 2) 주요 기능
 
@@ -31,19 +31,19 @@ https://cvalueinvestment-j67mjhzqlkoapmgbxghncy.streamlit.app/
 - **배포**: Streamlit Cloud
 
 ## 4) 폴더 & 데이터 구조
+
 - `main2.py` — 앱 엔트리 포인트(배포 시 Main file)
 - `users_data_v2.json` — 사용자 계정/프로필
 - `investment_data_v2.json` — 관심 기업(현재가/목표가/특징/업데이트 시각)
 - `posts_data_v2.json` — 리서치 게시글, 좋아요/리트윗 카운트, 댓글
-- Streamlit Cloud가 `requirements.txt`를 사용해 의존성을 설치함을 확인하여 
-  main2.py에 반영된 내용은 후에 추가 하여 배포준비 하였습니다.
+- Streamlit Cloud가 `requirements.txt`를 사용해 의존성을 설치함을 확인하여 main2.py에 반영된 내용은 후에 추가 하여 배포준비 하였습니다.
 
 ## 5) 설치 & 실행 (로컬)
 
-git clone <https://github.com/lion-nara/C_value_investment.git>
-cd <C_value_investment>
-pip install -r requirements.txt   # streamlit, requests, beautifulsoup4, lxml, pandas
-streamlit run main2.py
+- git clone <https://github.com/lion-nara/C_value_investment.git>
+- cd <C_value_investment>
+- pip install -r requirements.txt   # streamlit, requests, beautifulsoup4, lxml, pandas
+- streamlit run main2.py
 
 ## 6)  사용방법
 
