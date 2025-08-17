@@ -36,6 +36,84 @@
     "is_public": true,
     "likes": 0,
     "retweets": 0,
+    "comments": [
+      {
+        "content": "삼전 머스크 수혜 얼마나 갈까?",
+        "author": "lion",
+        "timestamp": "2025-08-18 00:20:08"
+      },
+      {
+        "content": "그래도 오르지 않을까? 대만이 후발로 올라오는 리스크 어떻게 하려나?",
+        "author": "lion",
+        "timestamp": "2025-08-18 00:20:36"
+      }
+    ]
+  },
+  {
+    "id": "341a7e7c-70db-4f9f-8512-e9a53c637e0f",
+    "company": "한국타이어앤테크놀로지",
+    "content": "[2025.08.13]  실적 발표\n\n2025년 2분기 연결 기준 실적: 매출 5조 3,696억원(전년 대비 약 131% 증가), 영업이익 3,536억원으로 전년 대비 15.8% 감소",
+    "author": "lion",
+    "timestamp": "2025-08-18 00:19:46",
+    "is_public": true,
+    "likes": 0,
+    "retweets": 0,
+    "comments": []
+  },
+  {
+    "id": "20a67efd-9206-4e0d-8430-c045c55557e7",
+    "company": "다우기술",
+    "content": "기업 분석\n실적 발표\n뉴스 정리\n[2025.08.12] ",
+    "author": "nara",
+    "timestamp": "2025-08-18 00:29:32",
+    "is_public": true,
+    "likes": 1,
+    "retweets": 1,
+    "comments": [
+      {
+        "content": "안녕하세요",
+        "author": "nara",
+        "timestamp": "2025-08-18 00:29:49"
+      }
+    ]
+  },
+  {
+    "id": "375bf587-932c-4f4a-b657-c1daab0e92fb",
+    "company": "한국타이어앤테크놀로지",
+    "content": "기업 분석\n뉴스 정리\n실적 발표\n[2025.08.12] 안녕하세욧",
+    "author": "lion",
+    "timestamp": "2025-08-18 00:44:46",
+    "is_public": true,
+    "likes": 2,
+    "retweets": 2,
+    "comments": [
+      {
+        "content": "반갑습니다. ",
+        "author": "nara",
+        "timestamp": "2025-08-18 00:46:07"
+      }
+    ]
+  },
+  {
+    "id": "cbb5cd3f-5124-4566-ac25-75253977864b",
+    "company": "다우기술",
+    "content": "기업 분석\n뉴스 정리\n[2025.08.12] 실적 발표\n",
+    "author": "lion",
+    "timestamp": "2025-08-18 00:51:00",
+    "is_public": true,
+    "likes": 0,
+    "retweets": 0,
+    "comments": []
+  },
+  {
+    "id": "26855ac2-d045-44cd-814b-22bcacd35a1d",
+    "company": "다우기술",
+    "content": "기업 분석\n뉴스 정리\n실적 발표\n[2025.08.12] ",
+    "author": "lion",
+    "timestamp": "2025-08-18 00:55:16",
+    "is_public": true,
+    "likes": 0,
+    "retweets": 0,
     "comments": []
   }
 ]

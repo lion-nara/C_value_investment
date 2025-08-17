@@ -7,6 +7,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import time
+import uuid
 
 # 페이지 설정
 st.set_page_config(
@@ -162,6 +163,12 @@ def load_data():
 def save_data(data):
     with open(DATA_FILE, 'w', encoding='utf-8') as f: json.dump(data, f, ensure_ascii=False, indent=2)
 
+# 추가: 기존 파일과 병합 저장
+def save_data_merge(user_key, user_data):
+    data_now = load_data()
+    data_now[user_key] = user_data
+    save_data(data_now)
+
 def load_posts():
     if os.path.exists(POSTS_FILE):
         with open(POSTS_FILE, 'r', encoding='utf-8') as f: return json.load(f)
@@ -305,7 +312,7 @@ def update_stock_prices(user_data, data):
                 company["last_updated"] = stock_info['updated_at']
                 company["change"] = stock_info['change']
                 company["change_rate"] = stock_info['change_rate']
-    save_data({ss.username_v2: user_data})
+    save_data_merge(ss.username_v2, user_data)
 
 # 기업 카드 표시
 def display_companies(user_data):
@@ -517,7 +524,7 @@ def write_research_post(posts):
 
         if submit and company and content:
             posts.append({
-                "id": len(posts),
+                "id": str(uuid.uuid4()),   # ✅ 영구 고정 id
                 "company": company,
                 "content": content,
                 "author": st.session_state.username_v2,
@@ -545,13 +552,33 @@ def display_post(post, index):
         </div>
         """, unsafe_allow_html=True)
 
+        # col1, col2, col3, _ = st.columns([1,1,1,3])
+        # with col1:
+        #     if st.button(f"❤️ {post['likes']}", key=f"like_v2_{index}"):
+        #         posts = load_posts(); posts[post['id']]['likes'] += 1; save_posts(posts); st.rerun()
+        # with col2:
+        #     if st.button(f"🔄 {post['retweets']}", key=f"retweet_v2_{index}"):
+        #         posts = load_posts(); posts[post['id']]['retweets'] += 1; save_posts(posts); st.rerun()
+        # with col3:
+        #     st.write(f"💬 {len(post.get('comments', []))}")
+
         col1, col2, col3, _ = st.columns([1,1,1,3])
         with col1:
-            if st.button(f"❤️ {post['likes']}", key=f"like_v2_{index}"):
-                posts = load_posts(); posts[post['id']]['likes'] += 1; save_posts(posts); st.rerun()
+            if st.button(f"❤️ {post['likes']}", key=f"like_v2_{post['id']}"):
+                posts = load_posts()
+                idx = next((i for i,p in enumerate(posts) if p.get('id') == post['id']), None)
+                if idx is not None:
+                    posts[idx]['likes'] += 1
+                    save_posts(posts)
+                    st.rerun()
         with col2:
-            if st.button(f"🔄 {post['retweets']}", key=f"retweet_v2_{index}"):
-                posts = load_posts(); posts[post['id']]['retweets'] += 1; save_posts(posts); st.rerun()
+            if st.button(f"🔄 {post['retweets']}", key=f"retweet_v2_{post['id']}"):
+                posts = load_posts()
+                idx = next((i for i,p in enumerate(posts) if p.get('id') == post['id']), None)
+                if idx is not None:
+                    posts[idx]['retweets'] += 1
+                    save_posts(posts)
+                    st.rerun()
         with col3:
             st.write(f"💬 {len(post.get('comments', []))}")
 
@@ -567,16 +594,37 @@ def display_comments(post, post_index):
         </div>
         """, unsafe_allow_html=True)
 
-    with st.form(f"comment_form_v2_{post_index}"):
-        new_comment = st.text_input("댓글 작성 (최대 140자)", max_chars=140, key=f"comment_input_v2_{post_index}")
+    # with st.form(f"comment_form_v2_{post_index}"):
+    #     new_comment = st.text_input("댓글 작성 (최대 140자)", max_chars=140, key=f"comment_input_v2_{post_index}")
+    #     submit_comment = st.form_submit_button("댓글 달기")
+    #     if submit_comment and new_comment:
+    #         posts = load_posts()
+    #         posts[post['id']].setdefault('comments', []).append({
+    #             "content": new_comment, "author": ss.username_v2,
+    #             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #         })
+    #         save_posts(posts); st.success("댓글이 추가되었습니다!"); st.rerun()
+
+    with st.form(f"comment_form_v2_{post['id']}"):
+        new_comment = st.text_input(
+            "댓글 작성 (최대 140자)",
+            max_chars=140,
+            key=f"comment_input_v2_{post['id']}"
+        )
         submit_comment = st.form_submit_button("댓글 달기")
         if submit_comment and new_comment:
             posts = load_posts()
-            posts[post['id']].setdefault('comments', []).append({
-                "content": new_comment, "author": ss.username_v2,
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            })
-            save_posts(posts); st.success("댓글이 추가되었습니다!"); st.rerun()
+            idx = next((i for i,p in enumerate(posts) if p.get('id') == post['id']), None)
+            if idx is not None:
+                posts[idx].setdefault('comments', []).append({
+                    "content": new_comment,
+                    "author": ss.username_v2,
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                })
+                save_posts(posts)
+                st.success("댓글이 추가되었습니다!")
+                st.rerun()
+
 
 # 기업 정보 수정
 def edit_companies(user_data, data):
@@ -613,7 +661,8 @@ def edit_companies(user_data, data):
                 "target_buy": target_buy, "target_sell": target_sell,
                 "description": description, "last_updated": d.get("last_updated", "")
             }
-            data[ss.username_v2] = user_data; save_data(data); st.success("Destiny 기업이 저장되었습니다!")
+            save_data_merge(ss.username_v2, user_data)
+            st.success("Destiny 기업이 저장되었습니다!")
 
     st.markdown("#### 🔍 관심 기업 5개 설정")
     for i in range(5):
@@ -647,7 +696,8 @@ def edit_companies(user_data, data):
                         "target_buy": target_buy, "target_sell": target_sell,
                         "description": description, "last_updated": c.get("last_updated", "")
                     }
-                    data[ss.username_v2] = user_data; save_data(data); st.success(f"관심 기업 {i+1}이 저장되었습니다!")
+                    save_data_merge(ss.username_v2, user_data)
+                    st.success(f"관심 기업 {i+1}이 저장되었습니다!")
 
 # 메인
 def main():
